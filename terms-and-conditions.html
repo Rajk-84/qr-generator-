@@ -4,66 +4,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms & Conditions - MaltiQR Forge</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ----- Reset & Base ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f4f7fc;
+            color: #1a2639;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 3rem 3.5rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 20, 80, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.06);
+        }
 
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background: linear-gradient(145deg, #10182f 0%, #1e2a47 100%); padding: 1.5rem; min-height: 100vh; }
-.container { max-width: 1000px; margin: 0 auto; background: rgba(255,255,255,0.1); backdrop-filter: blur(2px); border-radius: 20px; padding: 20px; }
-.nav-menu { background: rgba(0,0,0,0.4); padding: 12px 20px; border-radius: 50px; margin-bottom: 30px; text-align: center; }
-.nav-menu a { color: #FFD966; text-decoration: none; margin: 0 15px; font-weight: bold; }
-.nav-menu a:hover { color: #FFA500; text-decoration: underline; }
-h1 { color: #FFB347; margin-bottom: 20px; }
-.content { color: #ddd; line-height: 1.8; }
-h2 { color: #FFB347; margin: 20px 0 10px 0; font-size: 1.3rem; }
-footer { text-align: center; margin-top: 40px; color: #888; }
-</style>
+        /* ----- Header / Logo area ----- */
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #eef2f6;
+            padding-bottom: 1.2rem;
+        }
+        .brand-header span {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(145deg, #1e3a8a, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+        .brand-header small {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+            background: #f1f5f9;
+            padding: 0.15rem 1rem;
+            border-radius: 40px;
+            -webkit-text-fill-color: #475569;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #0b1e33;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.02em;
+        }
+        .last-updated {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #2563eb;
+            padding-left: 1rem;
+            background: #f8fafc;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-top: 2.2rem;
+            margin-bottom: 0.6rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #334155;
+        }
+        ul {
+            margin: 0.8rem 0 1.2rem 1.8rem;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        ul li::marker {
+            color: #2563eb;
+        }
+
+        /* ----- Buttons / Actions ----- */
+        .action-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2.8rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        .btn-primary, .btn-outline {
+            display: inline-block;
+            padding: 0.75rem 2.2rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+        .btn-primary {
+            background: #2563eb;
+            color: #fff;
+            box-shadow: 0 8px 18px -6px rgba(37, 99, 235, 0.4);
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -8px rgba(37, 99, 235, 0.5);
+        }
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: #475569;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        /* ----- Mobile Responsive ----- */
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .brand-header span {
+                font-size: 1.4rem;
+            }
+            .action-row {
+                flex-direction: column;
+            }
+            .btn-primary, .btn-outline {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="container">
 
-<div class="nav-menu">
-<a href="index.html">🏠 Home</a>
-<a href="about.html">ℹ️ About</a>
-<a href="privacy-policy.html">🔒 Privacy Policy</a>
-<a href="contact.html">📞 Contact</a>
-<a href="faq.html">❓ FAQ</a>
-<a href="terms-and-conditions.html">📜 Terms & Conditions</a>
-</div>
+    <!-- Branding (MaltiQR Forge) -->
+    <div class="brand-header">
+        <span>⬡ MaltiQR Forge</span>
+        <small>16-in-1 Studio</small>
+    </div>
 
-<h1><i class="fas fa-file-contract"></i> Terms & Conditions</h1>
+    <h1>📋 Terms &amp; Conditions</h1>
+    <div class="last-updated">✅ Last updated: July 2026</div>
 
-<div class="content">
+    <p>Welcome to <strong>MaltiQR Forge</strong>. By using our QR code generation tools, you agree to the following terms. Please read them carefully before generating any QR codes.</p>
 
-<p><strong>Last Updated:</strong> July 2026</p>
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing this website and using our QR code generator, you accept these Terms &amp; Conditions in full. If you disagree, you must discontinue use immediately.</p>
 
-<p>Welcome to MaltiQR Forge. By using our website, you agree to these Terms & Conditions.</p>
+    <h2>2. Permitted Use</h2>
+    <ul>
+        <li>You may use MaltiQR Forge for personal, educational, and commercial purposes.</li>
+        <li>You are solely responsible for the data/information you encode (e.g., URLs, vCards, WiFi passwords, etc.).</li>
+        <li>We do not store or save your generated QR codes or the data inside them unless explicitly mentioned.</li>
+    </ul>
 
-<h2>1. Use of Our Website</h2>
-<p>You may use our QR code generator for personal and commercial purposes in accordance with applicable laws.</p>
+    <h2>3. Prohibited Activities</h2>
+    <ul>
+        <li>Generating QR codes that link to illegal, harmful, or malicious content.</li>
+        <li>Reverse engineering, decompiling, or attempting to extract the source code of our tool.</li>
+        <li>Using our service to spam, phish, or distribute malware.</li>
+    </ul>
 
-<h2>2. User Responsibility</h2>
-<p>You are responsible for the information you encode into QR codes. Do not use our service for illegal or harmful activities.</p>
+    <h2>4. Intellectual Property</h2>
+    <p>The design, layout, graphics, and underlying code of MaltiQR Forge are our property. You may not reproduce, redistribute, or create derivative works without our prior written consent.</p>
 
-<h2>3. Third-Party Services</h2>
-<p>Our website may display Google AdSense advertisements and links to third-party websites.</p>
+    <h2>5. Disclaimer &amp; No Warranty</h2>
+    <p>Our QR generator is provided &quot;as is&quot; without any guarantees of accuracy, reliability, or compatibility with all scanners. We strongly recommend testing your QR codes on multiple devices before printing or publishing them.</p>
 
-<h2>4. Disclaimer</h2>
-<p>Our services are provided "as is" without warranties of any kind.</p>
+    <h2>6. Limitation of Liability</h2>
+    <p>In no event shall MaltiQR Forge, its creators, or affiliates be liable for any indirect, incidental, or consequential damages, including loss of data, revenue, or business opportunities, arising from the use of this tool.</p>
 
-<h2>5. Changes to These Terms</h2>
-<p>We may update these Terms & Conditions at any time without prior notice.</p>
+    <h2>7. External Links &amp; Third Parties</h2>
+    <p>Our tool may allow you to generate QR codes for third-party services (e.g., WhatsApp, Google Maps, etc.). We do not endorse or take responsibility for those external platforms.</p>
 
-<h2>6. Contact Us</h2>
-<p>If you have any questions, please visit our Contact page.</p>
+    <h2>8. Modification of Terms</h2>
+    <p>We reserve the right to update these Terms at any time without prior notice. Continued usage after changes constitutes acceptance of the revised terms.</p>
 
-</div>
+    <h2>9. Governing Law</h2>
+    <p>These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in your local jurisdiction.</p>
 
-<footer>
-© 2026 MaltiQR Forge | Free QR Code Generator
-</footer>
+    <h2>10. Contact</h2>
+    <p>For any questions or concerns about these Terms, please reach out via our <strong>Contact</strong> page or raise an issue on our GitHub repository.</p>
+
+    <!-- Navigation Action Buttons -->
+    <div class="action-row">
+        <a href="index.html" class="btn-primary">🏠 Back to Home</a>
+        <a href="privacy-policy.html" class="btn-outline">🔒 Privacy Policy</a>
+        <!-- Agar aapke paas Contact/FAQ pages hain toh unka link bhi yahan daal sakte hain -->
+    </div>
+
+    <div class="footer-note">
+        &copy; 2026 MaltiQR Forge. Crafted with ❤️ for smart QR solutions.
+    </div>
 
 </div>
 
