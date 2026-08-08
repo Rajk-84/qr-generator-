@@ -1,0 +1,423 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disclaimer – Malti QR Forge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fafc;
+      color: #0b1a33;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(0, 20, 40, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
+      padding: 2.5rem 2.8rem;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.8rem 1.2rem;
+        border-radius: 20px;
+      }
+    }
+
+    .disclaimer-header {
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 1.8rem;
+      margin-bottom: 2.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .disclaimer-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0b1a33;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .disclaimer-header h1 i {
+      color: #2563eb;
+      font-size: 1.8rem;
+    }
+
+    .disclaimer-header .badge {
+      background: #eef2f6;
+      color: #1e3a6f;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .disclaimer-header .badge i {
+      font-size: 0.7rem;
+      color: #2563eb;
+    }
+
+    @media (max-width: 480px) {
+      .disclaimer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+
+      .disclaimer-header h1 {
+        font-size: 1.6rem;
+      }
+    }
+
+    .last-updated {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #1e3a6f;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      margin-bottom: 2rem;
+      letter-spacing: 0.2px;
+    }
+
+    .last-updated i {
+      margin-right: 0.4rem;
+      color: #2563eb;
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      color: #1e293b;
+      background: #f8fafc;
+      padding: 1.2rem 1.6rem;
+      border-radius: 16px;
+      border-left: 4px solid #2563eb;
+      margin-bottom: 2.2rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      margin-bottom: 1.8rem;
+      padding: 1.6rem 1.8rem;
+      background: #fafcff;
+      border-radius: 16px;
+      border: 1px solid #eef2f6;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0b1a33;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title i {
+      color: #2563eb;
+      font-size: 1.1rem;
+      width: 1.5rem;
+      text-align: center;
+    }
+
+    .section p {
+      color: #1e293b;
+      font-size: 0.98rem;
+      line-height: 1.8;
+      margin-top: 0.2rem;
+    }
+
+    .contact-block {
+      margin-top: 2.5rem;
+      padding: 1.6rem 1.8rem;
+      background: #f1f6fe;
+      border-radius: 16px;
+      border: 1px solid #dbe3ef;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .contact-block .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #0b1a33;
+    }
+
+    .contact-block .brand i {
+      color: #2563eb;
+      font-size: 1.4rem;
+    }
+
+    .contact-block .contact-link {
+      background: #2563eb;
+      color: #fff;
+      padding: 0.5rem 1.6rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 480px) {
+      .contact-block {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .footer-note {
+      margin-top: 1.8rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #64748b;
+      border-top: 1px solid #eef2f6;
+      padding-top: 1.5rem;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-note i {
+      color: #2563eb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="disclaimer-header">
+      <h1>
+        <i class="fas fa-shield-alt"></i>
+        Disclaimer
+      </h1>
+
+      <span class="badge">
+        <i class="fas fa-check-circle"></i> Malti QR Forge
+      </span>
+    </div>
+
+    <div class="last-updated">
+      <i class="fas fa-calendar-alt"></i>
+      Last Updated: <span id="displayDate">August 8, 2026</span>
+    </div>
+
+    <div class="intro-text">
+      All content, information, and services available on the Malti QR Forge website are provided for general informational purposes and for the convenience of our users. By using this website or any of its tools, you acknowledge and agree to the terms outlined in this Disclaimer.
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-check-double"></i>
+        1. Accuracy of Information
+      </div>
+
+      <p>
+        We make reasonable efforts to ensure that the information available on our website is accurate and up to date. However, we do not guarantee the accuracy, completeness, reliability, or suitability of any information provided on this website for any particular purpose.
+      </p>
+
+      <p>
+        You use the information provided on this website at your own discretion and risk.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-qrcode"></i>
+        2. QR Code Generator Responsibility
+      </div>
+
+      <p>
+        Malti QR Forge provides a technical QR Code Generator tool. Users are solely responsible for the content, text, links, URLs, files, or other information included in the QR Codes they create.
+      </p>
+
+      <p>
+        If a QR Code directs users to a third-party website, file, or other online content, users are responsible for checking the accuracy, security, legality, and reliability of that content.
+      </p>
+
+      <p>
+        Malti QR Forge is not responsible for the content, security, availability, or practices of any third-party website or service accessed through a QR Code.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-external-link-alt"></i>
+        3. External Links
+      </div>
+
+      <p>
+        Our website may contain links to third-party websites or services. Such links may be provided for the convenience of our users.
+      </p>
+
+      <p>
+        We do not control or endorse the content, policies, security, or operation of external websites. Therefore, Malti QR Forge is not responsible for any loss, damage, or issue that may arise from your use of third-party websites or services.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-server"></i>
+        4. Service Availability
+      </div>
+
+      <p>
+        We make reasonable efforts to keep our website and QR Code Generator available and functioning properly. However, the website or its services may occasionally be unavailable due to technical issues, maintenance, server problems, internet connectivity issues, security incidents, or other circumstances beyond our reasonable control.
+      </p>
+
+      <p>
+        We are not responsible for temporary interruptions or unavailability of the website or its services.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-gavel"></i>
+        5. Limitation of Liability
+      </div>
+
+      <p>
+        To the extent permitted by applicable law, Malti QR Forge shall not be liable for any direct, indirect, incidental, or consequential loss or damage arising from, or related to, the use of or inability to use this website or its tools.
+      </p>
+
+      <p>
+        Users should independently verify important information, links, files, and QR Codes before using or sharing them.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-copyright"></i>
+        6. Intellectual Property
+      </div>
+
+      <p>
+        Original text, logos, designs, graphics, and other original materials available on Malti QR Forge may be the intellectual property of Malti QR Forge and may be protected by applicable intellectual property laws.
+      </p>
+
+      <p>
+        You should not copy, reproduce, republish, or commercially use our original materials without appropriate permission.
+      </p>
+
+      <p>
+        Third-party content, open-source software, libraries, fonts, icons, and other resources remain subject to the rights and licences of their respective owners.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-balance-scale"></i>
+        7. "As Is" and "As Available"
+      </div>
+
+      <p>
+        Malti QR Forge provides its website, content, and services on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis.
+      </p>
+
+      <p>
+        We do not guarantee that the website or its tools will always operate without errors, interruptions, delays, or technical problems.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-landmark"></i>
+        8. Governing Law
+      </div>
+
+      <p>
+        This Disclaimer shall be governed by and interpreted in accordance with the applicable laws of India.
+      </p>
+
+      <p>
+        Any dispute arising in connection with this Disclaimer shall be subject to the jurisdiction of competent courts as provided under applicable law.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-edit"></i>
+        9. Changes to This Disclaimer
+      </div>
+
+      <p>
+        Malti QR Forge may update or modify this Disclaimer from time to time. Any changes will be reflected on this page, and the "Last Updated" date may be revised accordingly.
+      </p>
+    </div>
+
+    <div class="section" style="margin-bottom:0;">
+      <div class="section-title">
+        <i class="fas fa-envelope"></i>
+        10. Contact Us
+      </div>
+
+      <p>
+        If you have any questions, concerns, or requests regarding this Disclaimer, you can contact us through our Contact Us page.
+      </p>
+    </div>
+
+    <div class="contact-block">
+      <div class="brand">
+        <i class="fas fa-bolt"></i>
+        Malti QR Forge
+      </div>
+
+      <!-- Add your Contact Us URL in place of # -->
+      <a href="#" class="contact-link">
+        <i class="fas fa-arrow-right"></i>
+        Contact Us
+      </a>
+    </div>
+
+    <div class="footer-note">
+      <i class="fas fa-shield-alt"></i>
+      &nbsp; Malti QR Forge &bull; Last Updated:
+      <span>August 8, 2026</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
+```
+  
