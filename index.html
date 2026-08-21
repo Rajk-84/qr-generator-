@@ -76,6 +76,186 @@
         </div>
         <div class="qr-preview"><h3><i class="fas fa-eye"></i> Live QR Preview</h3><div id="qrcode" class="qr-box"></div><div id="qrMessage" style="font-size:13px; color:#ffd966;">Ready! Click Generate</div></div>
     </div>
+    <!-- ====================================== -->
+<!--  INTRO + BLOG ARTICLES SECTION (NEW)   -->
+<!-- ====================================== -->
+
+<style>
+    /* यह स्टाइल सिर्फ इस सेक्शन के लिए है */
+    .malti-home-content {
+        max-width: 1400px;
+        margin: 30px auto 0;
+        padding: 0 15px 30px;
+        color: #e8eaf6;
+    }
+
+    .malti-intro {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(5px);
+        border: 1px solid #3a4668;
+        border-radius: 24px;
+        padding: 30px 35px;
+        margin-bottom: 40px;
+        line-height: 1.8;
+    }
+
+    .malti-intro h2 {
+        color: #ffd866;
+        font-size: 28px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .malti-intro p {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #cfd8f0;
+    }
+
+    .malti-articles-heading {
+        color: #ffd866;
+        font-size: 26px;
+        margin-bottom: 25px;
+        border-left: 5px solid #f9a826;
+        padding-left: 15px;
+    }
+
+    .malti-articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+
+    .malti-card {
+        background: rgba(20, 30, 55, 0.7);
+        backdrop-filter: blur(4px);
+        border: 1px solid #3a4668;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .malti-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-color: #ffd866;
+    }
+
+    .malti-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .malti-card-content {
+        padding: 18px 20px 22px;
+    }
+
+    .malti-card-content h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        line-height: 1.3;
+    }
+
+    .malti-card-content p {
+        font-size: 14px;
+        color: #b0c0e0;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .malti-read-more {
+        display: inline-block;
+        background-color: #ffd866;
+        color: #10182f;
+        font-weight: 700;
+        padding: 8px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.2s;
+    }
+
+    .malti-read-more:hover {
+        background-color: #ffe08a;
+        color: #000;
+    }
+
+    /* मोबाइल के लिए */
+    @media (max-width: 600px) {
+        .malti-intro { padding: 20px; }
+        .malti-intro h2 { font-size: 22px; }
+        .malti-articles-grid { grid-template-columns: 1fr; }
+        .malti-card img { height: 200px; }
+    }
+</style>
+
+<!-- Intro Section -->
+<div class="malti-home-content">
+    <div class="malti-intro">
+        <h2><i class="fas fa-qrcode"></i> MaltiQR Forge – Free 16-in-1 QR Code Generator</h2>
+        <p>QR codes आज websites, Wi-Fi sharing, contact details, payments, events और कई दूसरे digital tasks में इस्तेमाल किए जाते हैं। MaltiQR Forge एक free online QR code generator है, जहाँ आप अलग-अलग प्रकार की जानकारी के लिए QR codes आसानी से बना सकते हैं। इसे mobile phone, tablet या computer पर इस्तेमाल किया जा सकता है, इसलिए किसी अतिरिक्त software को install करने की जरूरत नहीं है।</p>
+        <p>MaltiQR Forge में आपको एक ही जगह पर <strong>16 QR code options</strong> मिलते हैं। आप URL/Website, Text, SMS, Phone Call, Email, WhatsApp, Wi-Fi, App, Event, Image, PDF, Twitter, Map और vCard जैसे QR codes बना सकते हैं। आपको केवल अपनी जानकारी दर्ज करनी होती है और हमारा live preview आपको generated QR code देखने में मदद करता है।</p>
+        <p>हमारा उद्देश्य QR code creation को simple और accessible बनाना है, चाहे आप किसी website का link share करना चाहते हों, Wi-Fi details देना चाहते हों, contact information साझा करना चाहते हों या किसी document, image या location तक जल्दी पहुँच उपलब्ध कराना चाहते हों।</p>
+        <p><strong>MaltiQR Forge केवल QR generator ही नहीं है।</strong> हमारे Blog में QR codes से जुड़ी practical guides और useful information भी उपलब्ध है। आप सीख सकते हैं कि अलग-अलग QR codes कैसे बनाए जाते हैं, उन्हें smartphone से कैसे scan किया जाता है, static और dynamic QR codes में क्या अंतर है और QR codes का इस्तेमाल अलग-अलग situations में कैसे किया जा सकता है।</p>
+        <p style="margin-bottom: 0;">अगर आप एक आसान और free QR code generator खोज रहे हैं, तो MaltiQR Forge पर अपना QR code बनाकर देखें और हमारे latest QR code guides से इसके बारे में और जानें।</p>
+    </div>
+
+    <!-- Articles List Section -->
+    <h3 class="malti-articles-heading"><i class="fas fa-newspaper"></i> Latest QR Code Guides</h3>
+    <div class="malti-articles-grid">
+        
+        <!-- Article Card 1 -->
+        <div class="malti-card">
+            <img src="https://placehold.co/600x400/1e2a47/ffd866?text=QR+Code+Guide" alt="QR Code Guide">
+            <div class="malti-card-content">
+                <h3>QR Code से पेमेंट कैसे करें?</h3>
+                <p>जानें कि आप UPI और QR Code का उपयोग करके कैसे सेकंडों में पेमेंट कर सकते हैं। यह गाइड पूरी प्रक्रिया को आसान शब्दों में समझाती है।</p>
+                <a href="/blog/qr-code-payment-guide.html" class="malti-read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- Article Card 2 -->
+        <div class="malti-card">
+            <img src="https://placehold.co/600x400/1e2a47/ffd866?text=WiFi+QR" alt="WiFi QR Code">
+            <div class="malti-card-content">
+                <h3>WiFi Password QR Code कैसे बनाएं?</h3>
+                <p>मेहमानों को WiFi पासवर्ड बताने की जरूरत नहीं, बस QR Code स्कैन करें और तुरंत कनेक्ट हो जाएं। जानें इसे बनाने का आसान तरीका।</p>
+                <a href="/blog/wifi-qr-code-guide.html" class="malti-read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- Article Card 3 -->
+        <div class="malti-card">
+            <img src="https://placehold.co/600x400/1e2a47/ffd866?text=Static+vs+Dynamic" alt="Static Dynamic QR">
+            <div class="malti-card-content">
+                <h3>Static और Dynamic QR Code में अंतर</h3>
+                <p>क्या आप जानते हैं कि Static और Dynamic QR Code में क्या फर्क है? किसका उपयोग कब करना चाहिए? पढ़ें इस डिटेल्ड गाइड में।</p>
+                <a href="/blog/static-vs-dynamic-qr.html" class="malti-read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- Article Card 4 -->
+        <div class="malti-card">
+            <img src="https://placehold.co/600x400/1e2a47/ffd866?text=QR+Security" alt="QR Code Security">
+            <div class="malti-card-content">
+                <h3>QR Code स्कैन करते समय सुरक्षा टिप्स</h3>
+                <p>क्या QR Code स्कैन करना सुरक्षित है? जानें किन बातों का ध्यान रखना चाहिए और फिशिंग (Phishing) से कैसे बचें, ताकि आपका डेटा सुरक्षित रहे।</p>
+                <a href="/blog/qr-code-security-tips.html" class="malti-read-more">Read More →</a>
+            </div>
+        </div>
+
+    </div>
+</div>
     <!-- ===== FOOTER START ===== -->
 <footer style="background: #1a1a2e; color: #ccc; padding: 30px 20px 15px; margin-top: 50px; font-family: Arial, sans-serif; border-top: 4px solid #4CAF50; text-align: center;">
 
